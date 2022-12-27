@@ -1,0 +1,44 @@
+﻿@model Catalogo_Pecas.Models.Produtos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Incluir Novo Produto</h1>
+
+<h4>Preencha os campos correspondentes:</h4>
+<hr />
+<div class="row">
+    <div class="col-md">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descrição" class="control-label"></label>
+                <input asp-for="Descrição" class="form-control" />
+                <span asp-validation-for="Descrição" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preço" class="control-label"></label>
+                <input asp-for="Preço" class="form-control" />
+                <span asp-validation-for="Preço" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

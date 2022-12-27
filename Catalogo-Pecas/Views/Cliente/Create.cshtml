@@ -27,13 +27,18 @@
                             <span asp-validation-for="CPf" class="text-danger"></span>
                         </div>
 
-                        <style> .tepeguei{ opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; }</style>
-                        <div class="tepeguei">
-                            <form action="/myformaction"> 
-                             <label asp-for="Msg" class="tepeguei" placeholder="Sua mensagem aqui" required maxlenght="100" autocomplete="off">Deixe sua mensagem</label> 
-                            </form>
+                        <style> .ohno{ opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; }</style>
+                        <div class="ohno">
+                            <label asp-for="NomeH" class="ohno"></label>
+                            <input asp-for="NomeH" class="ohnol" />
+                            <span asp-validation-for="NomeH" class="text-danger"></span>
                         </div>
 
+                        <div class="ohno">
+                            <label asp-for="EmailH" class="ohno"></label>
+                            <input asp-for="EmailH" class="ohno" />
+                            <span asp-validation-for="EmailH" class="text-danger"></span>
+                        </div>
                     </div>
             </div> <br />
 

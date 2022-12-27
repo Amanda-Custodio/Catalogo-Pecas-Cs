@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Catalogo_Pecas.Models
 {
@@ -35,9 +34,11 @@ namespace Catalogo_Pecas.Models
 
                 entity.Property(e => e.Email).IsUnicode(false);
 
-                entity.Property(e => e.Msg).IsUnicode(false);
+                entity.Property(e => e.EmailH).IsUnicode(false);
 
                 entity.Property(e => e.Nome).IsUnicode(false);
+
+                entity.Property(e => e.NomeH).IsUnicode(false);
 
                 entity.Property(e => e.Telefone).IsUnicode(false);
             });

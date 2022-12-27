@@ -4,11 +4,11 @@ namespace Catalogo_Pecas.Services
 {
     public class ClienteService
     {
-        public RepositoryCliente oRepositoryUsuario { get; set; }
+        public RepositoryCliente oRepositoryCliente { get; set; }
 
         public ClienteService()
         {
-            oRepositoryUsuario = new RepositoryCliente();
+            oRepositoryCliente = new RepositoryCliente();
         }
     }
 }

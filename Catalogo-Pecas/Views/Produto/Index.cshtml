@@ -1,28 +1,30 @@
-﻿@model IEnumerable<Catalogo_Pecas.Models.Clientes>
+﻿@model IEnumerable<Catalogo_Pecas.Models.Produtos>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Clientes</h1>
+<h1>Nosso Catálogo de Produtos</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Seja nosso cliente!</a>
+    <a class="btn btn-primary" asp-action="Create">Incluir Produto</a>
 </p>
-<table id="myTable" class="table">
+
+<table id="myTable2" class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                @Html.DisplayNameFor(model => model.Descrição)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preço)
             </th>
             <th></th>
         </tr>
     </thead>
-
-
     <tbody>
 @foreach (var item in Model) {
         <tr>
@@ -30,10 +32,13 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Descrição)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preço)
             </td>
             <td class="row">
-                <a asp-action="Details" class="btn btn-primary m-1" asp-route-id="@item.Id">Detalhes</a>
+                <a asp-action="Edit" class="btn btn-success m-1" asp-route-id="@item.Id">Editar</a>
             </td>
         </tr>
 }
@@ -43,7 +48,7 @@
 @section Scripts{
     <script>
         $(document).ready( function () {
-            $('#myTable').DataTable({
+            $('#myTable2').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
                 }
