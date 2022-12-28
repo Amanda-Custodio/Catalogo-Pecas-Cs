@@ -14,8 +14,9 @@ namespace Catalogo_Pecas.Interfaces
 
             P Alterar(P objeto);
 
-            void Excluir(P objeto);
-            void ExcluirPK(params object[] variavel);
+            public void Excluir(P objeto);
+
+            public void ExcluirPK(params object[] variavel);
 
             void SaveChanges();
         }

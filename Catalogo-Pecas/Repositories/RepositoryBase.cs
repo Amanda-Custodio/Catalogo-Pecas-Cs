@@ -36,7 +36,6 @@ namespace Catalogo_Pecas.Repositories
             {
                 _Contexto.SaveChanges();
             }
-
             return objeto;
         }
 
@@ -72,7 +71,7 @@ namespace Catalogo_Pecas.Repositories
 
         public List<P> SelecionarTodos()
         {
-            return _Contexto.Set<P>().ToList<P>();
+            return _Contexto.Set<P>().ToList();
         }
     }
 }

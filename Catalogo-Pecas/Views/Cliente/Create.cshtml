@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Cadastre-se</h1>
+<h1>Fale conosco</h1>
 
-<h4>Por favor, preencha os campos abaixo:</h4>
+<h4>Preencha os campos corretamente e entraremos em contato!</h4>
 <hr />
 <div class="row">
     <div class="col-md">
@@ -16,26 +16,26 @@
                 <div class="card-header">Informações Pessoais</div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label asp-for="Nome" class="control-label"></label>
+                            <label asp-for="Nome" class="control-label">Nome Completo</label>
                             <input asp-for="Nome" class="form-control" />
                             <span asp-validation-for="Nome" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="CPf" class="control-label"></label>
+                            <label asp-for="CPf" class="control-label">CPF</label>
                             <input asp-for="CPf" class="form-control" />
                             <span asp-validation-for="CPf" class="text-danger"></span>
                         </div>
 
                         <style> .ohno{ opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; }</style>
                         <div class="ohno">
-                            <label asp-for="NomeH" class="ohno"></label>
+                            <label asp-for="NomeH" class="ohno">Seu Nome</label>
                             <input asp-for="NomeH" class="ohnol" />
                             <span asp-validation-for="NomeH" class="text-danger"></span>
                         </div>
 
                         <div class="ohno">
-                            <label asp-for="EmailH" class="ohno"></label>
+                            <label asp-for="EmailH" class="ohno">Seu E-mail</label>
                             <input asp-for="EmailH" class="ohno" />
                             <span asp-validation-for="EmailH" class="text-danger"></span>
                         </div>
@@ -46,19 +46,19 @@
                 <div class="card-header">Informações de Contato</div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label asp-for="Email" class="control-label"></label>
+                            <label asp-for="Email" class="control-label">E-mail</label>
                             <input asp-for="Email" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
             
                         <div class="form-group">
-                            <label asp-for="Telefone" class="control-label"></label>
+                            <label asp-for="Telefone" class="control-label">Telefone</label>
                             <input asp-for="Telefone" class="form-control" />
                             <span asp-validation-for="Telefone" class="text-danger"></span>
                         </div>
 
                         <div class="form-group">
-                            <label asp-for="Cidade" class="control-label"></label>
+                            <label asp-for="Cidade" class="control-label">Cidade</label>
                             <input asp-for="Cidade" class="form-control" />
                             <span asp-validation-for="Cidade" class="text-danger"></span>
                         </div>
