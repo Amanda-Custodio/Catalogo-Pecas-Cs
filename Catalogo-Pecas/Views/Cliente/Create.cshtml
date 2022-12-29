@@ -1,4 +1,5 @@
-﻿@model Catalogo_Pecas.Models.Clientes
+﻿@using Catalogo_Pecas.Utilities
+@model Catalogo_Pecas.Models.Clientes
 
 @{
     ViewData["Title"] = "Create";
@@ -27,20 +28,31 @@
                             <span asp-validation-for="CPf" class="text-danger"></span>
                         </div>
 
+                        <div class="form-group">
+                            <label asp-for="Tipo" class="control-label">Perfil</label>
+                            <select asp-for="Tipo" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="@TipoUsuario.Administrador" >Administrador</option>
+                            <option value="@TipoUsuario.Padrao" >Padrão</option>
+                                </select>
+                                    @Html.ValidationMessageFor(x => x.Tipo)
+                        </div>
+                        </div>
+
                         <style> .ohno{ opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; }</style>
                         <div class="ohno">
                             <label asp-for="NomeH" class="ohno">Seu Nome</label>
                             <input asp-for="NomeH" class="ohnol" />
-                            <span asp-validation-for="NomeH" class="text-danger"></span>
                         </div>
 
                         <div class="ohno">
                             <label asp-for="EmailH" class="ohno">Seu E-mail</label>
                             <input asp-for="EmailH" class="ohno" />
-                            <span asp-validation-for="EmailH" class="text-danger"></span>
                         </div>
+
                     </div>
-            </div> <br />
+            <br />
+
 
             <div class="card">
                 <div class="card-header">Informações de Contato</div>
@@ -49,6 +61,12 @@
                             <label asp-for="Email" class="control-label">E-mail</label>
                             <input asp-for="Email" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Senha" class="control-label">Senha</label>
+                            <input type="password" asp-for="Senha" class="form-control" />
+                            <span asp-validation-for="Senha" class="text-danger"></span>
                         </div>
             
                         <div class="form-group">
@@ -62,6 +80,12 @@
                             <input asp-for="Cidade" class="form-control" />
                             <span asp-validation-for="Cidade" class="text-danger"></span>
                         </div>
+
+                        <div class="form-group">
+                            <label asp-for="Mensagem" class="control-label">Mensagem</label>
+                            <input asp-for="Mensagem" class="form-control" />
+                            <span asp-validation-for="Mensagem" class="text-danger"></span>
+                        </div>
                     </div>
             </div>
             <br />
@@ -69,6 +93,7 @@
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-success" />
             </div>
+
         </form>
     </div>
 </div>
