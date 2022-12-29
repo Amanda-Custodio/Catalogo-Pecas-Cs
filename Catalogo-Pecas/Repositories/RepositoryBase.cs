@@ -44,21 +44,6 @@ namespace Catalogo_Pecas.Repositories
             _Contexto.Dispose();
         }
 
-        public void Excluir(P objeto)
-        {
-            _Contexto.Set<P>().Remove(objeto);
-            if (_SaveChanges)
-            {
-                _Contexto.SaveChanges();
-            }
-        }
-
-        public void ExcluirPK(params object[] variavel)
-        {
-            var obj = SelecionarPK(variavel);
-            ExcluirPK(obj);
-        }
-
         public void SaveChanges()
         {
             _Contexto.SaveChanges();
